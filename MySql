@@ -1,0 +1,16 @@
+write a procedure to display all employees in given dept and sal > given sal
+
+
+delimiter //
+
+create procedure dis_empl(dep int,ss double(9,2))
+begin
+
+select *
+from emp
+where deptno=dep and sal>ss;
+
+end //
+delimiter ;
+
+call dis_emp1(10,1500);
